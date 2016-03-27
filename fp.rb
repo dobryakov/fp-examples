@@ -29,7 +29,8 @@ def listsum(list)
   end
 end
 
-def forr(a, b, f) # example: for i=a; i<=b; i++ do; i*i; end
-  f.call(a)
-  forr(a+1, b, f) if a<b
+def forr(a, b, f, acc = []) # example: for i=a; i<=b; i++ do; i*i; end
+  v = acc.push f.call(a)
+  forr(a+1, b, f, v) if a<b
+  acc
 end

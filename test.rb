@@ -20,4 +20,4 @@ assert listsum([1, 2, 3]), 6
 assert listsum([0, 0, 4]), 4
 assert listsum([4, 3, 2, 1]), 10
 
-forr(1, 3, -> (i) { p i*i } )
+assert forr(2, 5, -> (i) { i*i } ), [4, 9, 16, 25]
